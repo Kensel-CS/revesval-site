@@ -1,0 +1,114 @@
+ESTRATEGIA GOOGLE ADS — REVESVAL
+=================================
+Presupuesto: menos de $200.000 CLP/mes
+Zona: Todo Chile
+Cliente objetivo: Agricultores / dueños de fundo
+Foco: 100% Impermeabilización de Tranques
+
+
+CONFIGURACIÓN DE LA CAMPAÑA
+----------------------------
+Tipo: Búsqueda (Search)
+Objetivo: Clientes potenciales (Leads)
+Estrategia de puja: Maximizar clicks (mes 1) → Maximizar conversiones (mes 2+)
+Presupuesto diario: $5.000–$6.000 CLP
+Segmentación: Todo Chile
+Idioma: Español
+Horario: Lunes a Viernes 8:00–18:00 · Sábado 9:00–13:00
+Dispositivos: Todos
+
+
+PALABRAS CLAVE (concordancia exacta y de frase)
+------------------------------------------------
+[impermeabilización de tranques]
+[geomembrana para tranques]
+"impermeabilizar tranque agrícola"
+"geomembrana HDPE tranque"
+"revestimiento de tranques Chile"
+"empresa impermeabilización tranques"
+"tranque con geomembrana"
+"impermeabilización tranque precio"
+
+
+PALABRAS NEGATIVAS (no mostrar en estas búsquedas)
+---------------------------------------------------
+piscina, piscinas, estanque peces, acuario, minería,
+industrial, bricolaje, como hacer, youtube, gratis,
+curso, arriendo, venta geomembrana
+
+
+ANUNCIO 1 — Directo al servicio
+---------------------------------
+Título 1: Impermeabilización de Tranques
+Título 2: Geomembrana HDPE · Todo Chile
+Título 3: +250.000 m² Instalados · Cotiza
+Descripción 1: Somos especialistas en revestimiento de tranques agrícolas con geomembrana HDPE y geotextil. Evaluación sin compromiso.
+Descripción 2: Atendemos fundos y agricultores en todo Chile. Más de 10 años de experiencia. Solicita tu visita técnica hoy.
+
+ANUNCIO 2 — Enfocado en el problema
+--------------------------------------
+Título 1: ¿Tu Tranque Tiene Filtraciones?
+Título 2: Lo Solucionamos con Geomembrana
+Título 3: Visita Técnica Sin Costo
+Descripción 1: Impermeabilizamos tranques, canales y acumuladores para el sector agrícola. Presupuesto rápido y sin compromiso.
+Descripción 2: Trabajamos con viñas, fundos y agricultores en todo Chile. Contáctanos y te asesoramos.
+
+ANUNCIO 3 — Enfocado en credibilidad
+---------------------------------------
+Título 1: REVESVAL · Especialistas en Riego
+Título 2: Impermeabilización de Tranques
+Título 3: +10 Años · Clientes en Todo Chile
+Descripción 1: Empresa chilena especialista en impermeabilización con geomembrana para el sector agrícola. Hemos trabajado con INDAP, viñas y fundos.
+Descripción 2: Diseño e instalación de soluciones hídricas para agricultores. Solicita evaluación en revesval.cl
+
+
+EXTENSIONES DE ANUNCIO
+------------------------
+ENLACES DE SITIO:
+  - "Ver Proyectos"       → revesval.cl/#proyectos
+  - "Solicitar Evaluación" → revesval.cl/#contacto
+  - "Nuestros Servicios"  → revesval.cl/#servicios
+  - "Quiénes Somos"       → revesval.cl/#nosotros
+
+TEXTOS DESTACADOS:
+  - +250.000 m² Instalados
+  - Atención en Todo Chile
+  - +10 Años de Experiencia
+  - Sin Compromiso
+
+LLAMADA: agregar número de teléfono real de REVESVAL
+
+
+PROYECCIÓN MENSUAL ESTIMADA
+-----------------------------
+Impresiones:        2.000 – 5.000
+Clicks:             80 – 180
+Costo por click:    $1.000 – $2.500 CLP
+Leads (formularios): 3 – 8
+Cierres estimados:  1 – 2
+
+
+PLAN DE ACCIÓN — PRIMEROS 60 DÍAS
+-----------------------------------
+Días  1–14: Lanzar y no tocar nada. Google está aprendiendo.
+Días 15–30: Revisar informe de términos de búsqueda. Agregar palabras negativas.
+Días 31–60: Optimizar pujas. Pausar palabras que no convierten. 
+            Si hay leads, cambiar estrategia a "Maximizar conversiones".
+
+
+CHECKLIST ANTES DE LANZAR
+---------------------------
+[ ] revesval.cl publicada y funcionando
+[ ] Formulario de contacto enviando correos reales (Web3Forms)
+[ ] Número de teléfono real visible en la página
+[ ] Cuenta Google Ads creada en ads.google.com
+[ ] Google Analytics instalado en la página
+[ ] Tarjeta de crédito/débito agregada en Google Ads
+
+
+PASOS PARA CONECTAR FORMULARIO (Web3Forms)
+-------------------------------------------
+1. Ir a web3forms.com
+2. Crear cuenta con el correo de REVESVAL
+3. Copiar el access_key que te entregan
+4. Enviárselo a Claude para integrarlo al HTML en 5 minutos

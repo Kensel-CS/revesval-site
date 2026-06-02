@@ -1,0 +1,23 @@
+# Normalizar finales de línea: LF en repo (estándar para deploy a Linux/Apache)
+* text=auto eol=lf
+
+# Binarios (no diff, no merge)
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.avif  binary
+*.mp4   binary
+*.webm  binary
+*.pdf   binary
+*.docx  binary
+*.zip   binary
+*.woff  binary
+*.woff2 binary
+*.ico   binary
+
+# Shell scripts: siempre LF
+*.sh text eol=lf
+
+# Forzar CRLF en archivos específicos de Windows (ninguno por ahora)
