@@ -34,3 +34,12 @@ Options -Indexes
 
 # Páginas de error simples (opcional, descomentar si se agregan)
 # ErrorDocument 404 /index.html
+
+# MIME types modernos
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/avif .avif
+  AddType video/mp4 .mp4
+  AddType video/webm .webm
+  AddType application/manifest+json .webmanifest
+</IfModule>
