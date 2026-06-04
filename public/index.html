@@ -603,101 +603,94 @@ h3{
 .cri .cu{font-size:15px;color:rgba(255,255,255,.5);margin-left:4px;font-weight:400}
 
 /* ═══════════════ CONTACTO ═══════════════ */
-.contacto{background:var(--bg);padding:120px 0}
+/* CONTACTO — versión compacta */
+.contacto{background:var(--bg);padding:80px 0}
+@media(max-width:900px){.contacto{padding:56px 0}}
+
 .cto-g{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
-  gap:88px;
-  align-items:start;
-}
-@media(max-width:1100px){.cto-g{gap:56px}}
-@media(max-width:900px){.cto-g{grid-template-columns:1fr;gap:48px}}
-
-/* Columna info — sticky en desktop para acompañar el scroll */
-.cto-l{position:sticky;top:96px}
-@media(max-width:900px){.cto-l{position:static}}
-.cto-l h2{
-  margin-bottom:22px;
-  text-wrap:balance;
-  max-width:14ch;
-  line-height:1.05;
-}
-.cto-l .desc{font-size:16px;color:var(--muted);line-height:1.7;max-width:460px;margin-bottom:40px}
-
-.cdata{border-top:1px solid var(--line)}
-.cdr{
-  padding:22px 0;
-  border-bottom:1px solid var(--line2);
-  display:grid;
-  grid-template-columns:130px 1fr;
-  gap:24px;
+  gap:72px;
   align-items:center;
 }
-.cdr .clbl{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:700}
-.cdr .cval{font-size:17px;font-weight:500;color:var(--ink);line-height:1.4}
+@media(max-width:1100px){.cto-g{gap:48px}}
+@media(max-width:900px){.cto-g{grid-template-columns:1fr;gap:36px;align-items:start}}
+
+.cto-l h2{
+  font-size:clamp(28px, 3.4vw, 42px) !important;
+  font-weight:300;
+  line-height:1.1;
+  letter-spacing:-.01em;
+  text-wrap:balance;
+  max-width:16ch;
+  margin-bottom:14px;
+}
+.cto-l .desc{
+  font-size:15px;color:var(--muted);line-height:1.65;
+  max-width:440px;margin-bottom:24px;
+}
+
+.cdata{border-top:1px solid var(--line2)}
+.cdr{
+  padding:13px 0;
+  border-bottom:1px solid var(--line2);
+  display:grid;
+  grid-template-columns:100px 1fr;
+  gap:18px;
+  align-items:center;
+}
+.cdr .clbl{
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;
+}
+.cdr .cval{font-size:15px;font-weight:500;color:var(--ink);line-height:1.4}
 a.cdr .cval{transition:color .2s}
 a.cdr:hover .cval{color:var(--blue2)}
 
-.cpasos{margin-top:40px}
-.cpasos strong{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:700;display:block;margin-bottom:18px}
-.cpasos ul{list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:4px}
-.cpasos li{
-  font-size:14px;color:var(--ink2);
-  padding:12px 0;border-bottom:1px solid var(--line2);
-  display:flex;gap:14px;align-items:flex-start;
-  counter-increment:step;font-weight:400;line-height:1.55;
-}
-.cpasos li::before{
-  content:counter(step);
-  display:flex;align-items:center;justify-content:center;
-  width:22px;height:22px;min-width:22px;
-  background:var(--blue2);color:#fff;
-  font-size:10px;font-weight:700;
-  margin-top:1px;
-}
-
-/* FORM — más editorial, más aire */
+/* FORM — compacto y limpio */
 .fbox{
   background:var(--bg2);
-  padding:56px 48px;
+  padding:32px 28px;
   border:1px solid var(--line2);
 }
-@media(max-width:1100px){.fbox{padding:44px 36px}}
-@media(max-width:520px){.fbox{padding:32px 22px}}
+@media(max-width:520px){.fbox{padding:24px 18px}}
 
 .fbox h4{
-  font-size:26px;font-weight:600;
-  margin-bottom:6px;letter-spacing:-.01em;
-  line-height:1.2;
+  font-size:19px;font-weight:600;
+  margin-bottom:3px;letter-spacing:-.005em;
+  line-height:1.25;
 }
-.fbox .fsub{font-size:13.5px;color:var(--muted);margin-bottom:36px;font-weight:400;line-height:1.5}
+.fbox .fsub{
+  font-size:12.5px;color:var(--muted);
+  margin-bottom:18px;font-weight:400;line-height:1.5;
+}
 
-.ff{margin-bottom:22px}
+.ff{margin-bottom:12px}
 .ff label{
   display:block;
-  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:9px;font-weight:700;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:5px;font-weight:700;
 }
 .ff input,.ff textarea,.ff select{
-  width:100%;padding:14px 14px;background:#fff;
+  width:100%;padding:10px 12px;background:#fff;
   border:1px solid var(--line);
-  color:var(--ink);font-size:15px;font-family:inherit;outline:none;
+  color:var(--ink);font-size:14px;font-family:inherit;outline:none;
   transition:border-color .2s, box-shadow .2s;font-weight:400;
 }
 .ff input:focus,.ff textarea:focus,.ff select:focus{
   border-color:var(--blue);
   box-shadow:0 0 0 3px rgba(45,136,176,.12);
 }
-.ff textarea{resize:vertical;min-height:120px;line-height:1.5}
+.ff textarea{resize:vertical;min-height:74px;line-height:1.5}
 
-.frow2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.frow2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:520px){.frow2{grid-template-columns:1fr;gap:0}}
 
 .fsub2{
-  width:100%;padding:17px;background:var(--blue2);color:#fff;border:none;
-  font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;
+  width:100%;padding:12px;background:var(--blue2);color:#fff;border:none;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
   cursor:pointer;transition:background .3s, transform .15s;font-family:inherit;
-  margin-top:12px;
+  margin-top:4px;
 }
 .fsub2:hover{background:var(--blue)}
 .fsub2:active{transform:scale(.99)}
@@ -1473,25 +1466,16 @@ body {
       <div class="reveal">
         <div class="ey">Contacto</div>
         <h2>Cuéntanos de <em>tu proyecto.</em></h2>
-        <p class="desc">Completa el formulario y en menos de 24 horas hábiles te contactaremos para avanzar en tu proyecto.</p>
+        <p class="desc">Respuesta en menos de 24 horas hábiles. Cobertura nacional.</p>
         <div class="cdata">
-          <a href="mailto:contacto@revesval.cl" class="cdr" style="display:grid"><span class="clbl">Correo</span><span class="cval">contacto@revesval.cl</span></a>
-          <a href="tel:+56900000000" class="cdr" style="display:grid"><span class="clbl">Teléfono</span><span class="cval">+56 9 0000 0000</span></a>
-          <div class="cdr"><span class="clbl">Ubicación</span><span class="cval">Región de Valparaíso</span></div>
-          <div class="cdr"><span class="clbl">Cobertura</span><span class="cval">Todo Chile</span></div>
-        </div>
-        <div class="cpasos">
-          <strong>Entrega y coordinación</strong>
-          <ul>
-            <li>Te contactaremos vía teléfono o correo a la brevedad.</li>
-            <li>Gestionaremos una visita en terreno para aclarar tus dudas.</li>
-            <li>La programación queda sujeta a disponibilidad del equipo.</li>
-          </ul>
+          <a href="mailto:contacto@revesval.cl" class="cdr"><span class="clbl">Correo</span><span class="cval">contacto@revesval.cl</span></a>
+          <a href="tel:+56900000000" class="cdr"><span class="clbl">Teléfono</span><span class="cval">+56 9 0000 0000</span></a>
+          <div class="cdr"><span class="clbl">Ubicación</span><span class="cval">Valparaíso · Todo Chile</span></div>
         </div>
       </div>
       <form class="fbox reveal d1" onsubmit="event.preventDefault();alert('¡Mensaje enviado! Te contactaremos a la brevedad.');this.reset()">
         <h4>Solicitar visita técnica</h4>
-        <p class="fsub">Respuesta en menos de 24 horas hábiles.</p>
+        <p class="fsub">Te respondemos en menos de 24 horas hábiles.</p>
 
         <div class="ff"><label for="cf-nombre">Nombre completo</label>
           <input id="cf-nombre" name="nombre" type="text" autocomplete="name" required>
@@ -1506,18 +1490,8 @@ body {
           </div>
         </div>
 
-        <div class="ff"><label for="cf-servicio">Servicio de interés</label>
-          <select id="cf-servicio" name="servicio">
-            <option>Revestimiento / Impermeabilización</option>
-            <option>Electrofusión HDPE</option>
-            <option>Riego tecnificado</option>
-            <option>Diseño de proyectos</option>
-            <option>Otro</option>
-          </select>
-        </div>
-
         <div class="ff"><label for="cf-msg">Cuéntanos de tu proyecto</label>
-          <textarea id="cf-msg" name="mensaje" placeholder="Ubicación, tamaño aproximado del tranque, plazos..."></textarea>
+          <textarea id="cf-msg" name="mensaje" placeholder="Servicio, ubicación, tamaño, plazos..."></textarea>
         </div>
 
         <button type="submit" class="fsub2">Enviar solicitud</button>
