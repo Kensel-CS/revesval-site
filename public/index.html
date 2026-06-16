@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R2N2FMSTW0"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-R2N2FMSTW0');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>REVESVAL — Impermeabilización de Tranques y Riego Agrícola</title>
@@ -564,13 +572,16 @@ h3{
 }
 .fb:hover{border-color:var(--ink);color:var(--ink)}
 .fb.active{background:var(--ink);color:#fff;border-color:var(--ink)}
-/* Grid masonry-like: 3 cols normales + 1 panorámica */
-.proy-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-@media(max-width:860px){.proy-g{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.proy-g{grid-template-columns:1fr}}
-.pc{aspect-ratio:4/3;overflow:hidden;position:relative;cursor:pointer}
+/* Grid editorial sin huecos: dense flow + spans mixtos */
+.proy-g{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:280px;grid-auto-flow:dense;gap:12px}
+@media(max-width:860px){.proy-g{grid-template-columns:repeat(2,1fr);grid-auto-rows:240px}}
+@media(max-width:520px){.proy-g{grid-template-columns:1fr;grid-auto-rows:220px}}
+.pc{overflow:hidden;position:relative;cursor:pointer}
 .pc.wide{grid-column:span 2}
-@media(max-width:860px){.pc.wide{grid-column:span 1}}
+.pc.tall{grid-row:span 2}
+.pc.big{grid-column:span 2;grid-row:span 2}
+@media(max-width:860px){.pc.wide,.pc.big{grid-column:span 1}.pc.tall,.pc.big{grid-row:span 1}}
+@media(max-width:520px){.pc.wide,.pc.big{grid-column:span 1}.pc.tall,.pc.big{grid-row:span 1}}
 .pc img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s ease}
 .pc:hover img{transform:scale(1.06)}
 .pc::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.68) 100%)}
@@ -798,8 +809,8 @@ footer{background:var(--ink);color:#fff;padding:72px 0 36px}
 
   /* Proyectos */
   .proyectos{padding:80px 0}
-  .proy-g{grid-template-columns:repeat(2,1fr);gap:14px}
-  .pc.wide{grid-column:span 1}
+  .proy-g{grid-template-columns:repeat(2,1fr);grid-auto-rows:240px;gap:14px}
+  .pc.wide,.pc.big{grid-column:span 1}.pc.tall,.pc.big{grid-row:span 1}
 
   /* Calculadora */
   .calc{padding:80px 0}
@@ -876,7 +887,8 @@ footer{background:var(--ink);color:#fff;padding:72px 0 36px}
   .proyectos{padding:64px 0}
   .filtros{gap:6px;margin:20px 0 36px}
   .fb{padding:8px 14px;font-size:10px}
-  .proy-g{grid-template-columns:1fr 1fr;gap:10px}
+  .proy-g{grid-template-columns:1fr 1fr;grid-auto-rows:200px;gap:10px}
+  .pc.wide,.pc.big{grid-column:span 1}.pc.tall,.pc.big{grid-row:span 1}
   .pc-info h5{font-size:15px}
 
   /* Calculadora */
@@ -924,9 +936,8 @@ footer{background:var(--ink);color:#fff;padding:72px 0 36px}
   .det-list li{font-size:13.5px;padding:11px 0}
 
   /* Proyectos: 1 col */
-  .proy-g{grid-template-columns:1fr}
-  .pc{aspect-ratio:16/9}
-  .pc.wide{grid-column:span 1}
+  .proy-g{grid-template-columns:1fr;grid-auto-rows:220px}
+  .pc.wide,.pc.big{grid-column:span 1}.pc.tall,.pc.big{grid-row:span 1}
 
   /* Clientes: 2 col */
   .cli-row{grid-template-columns:1fr 1fr}
@@ -1073,7 +1084,6 @@ body {
 /* 10. Aspect-ratio fallback para Safari <15 */
 @supports not (aspect-ratio: 1/1) {
   .srv-img::before  { content: ''; display: block; padding-top: 133%; }
-  .pc::before       { content: ''; display: block; padding-top: 75%; }
   .pblock           { height: 60vh; }
 }
 
@@ -1440,7 +1450,7 @@ body {
       </div>
     </div>
     <div class="proy-g reveal">
-      <div class="pc" data-r="centro">
+      <div class="pc big" data-r="centro">
         <img src="assets/img/5781dee9cf.webp" alt="Tranque geomembrana Región Metropolitana">
         <div class="pc-info"><h5>Tranque agrícola</h5><span>Región Metropolitana</span></div>
       </div>
@@ -1452,7 +1462,7 @@ body {
         <img src="assets/img/f239a93237.webp" alt="Tranque negra Andes Norte">
         <div class="pc-info"><h5>Tranque con geomembrana negra</h5><span>Región de Coquimbo</span></div>
       </div>
-      <div class="pc" data-r="centro">
+      <div class="pc tall" data-r="centro">
         <img src="assets/img/b1c2106487.webp" alt="Reservorio impermeabilizado">
         <div class="pc-info"><h5>Reservorio impermeabilizado</h5><span>Región de O'Higgins</span></div>
       </div>
@@ -1472,7 +1482,7 @@ body {
         <img src="assets/img/55dd54e397.webp" alt="Tranque zona sur Chile">
         <div class="pc-info"><h5>Tranque zona sur</h5><span>Región del Biobío</span></div>
       </div>
-      <div class="pc" data-r="centro">
+      <div class="pc wide" data-r="centro">
         <img src="assets/img/1f4df66519.webp" alt="Soldadura geomembrana técnico">
         <div class="pc-info"><h5>Instalación técnica</h5><span>Región de Valparaíso</span></div>
       </div>
