@@ -1,0 +1,121 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/assets/img
+public_folder: assets/img
+
+collections:
+  - name: "configuracion"
+    label: "Configuración del Sitio"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "content"
+        label: "Contenido General"
+        file: "public/data/content.json"
+        description: "Textos, imágenes, métricas y detalles de contacto del sitio"
+        fields:
+          - { label: "Sección Hero", name: "hero", widget: "object", fields: [
+              { label: "Título (Parte 1)", name: "title_part1", widget: "string" },
+              { label: "Título Destacado (Parte 2)", name: "title_emphasis", widget: "string" },
+              { label: "Descripción / Lead", name: "lead", widget: "text", required: false },
+              { label: "Texto del Botón", name: "cta_text", widget: "string" },
+              { label: "Enlace del Botón", name: "cta_link", widget: "string" },
+              { label: "Tipo de Fondo", name: "media_type", widget: "select", options: ["video", "image"] },
+              { label: "Archivo de Video (.mp4)", name: "video_src", widget: "file", required: false },
+              { label: "Imagen de Fondo / Poster Video", name: "image_src", widget: "image" }
+            ]}
+          - { label: "Sección Nuestra Empresa", name: "empresa", widget: "object", fields: [
+              { label: "Etiqueta superior", name: "ey", widget: "string" },
+              { label: "Título principal", name: "title_part1", widget: "string" },
+              { label: "Título Destacado", name: "title_emphasis", widget: "string" },
+              { label: "Texto Introductorio", name: "lead", widget: "text" },
+              { label: "Texto del Cuerpo", name: "body", widget: "text" },
+              { label: "Cifras y Métricas (4 elementos)", name: "cifras", widget: "list", max: 4, fields: [
+                  { label: "Número/Valor (ej. 250.000)", name: "number", widget: "string" },
+                  { label: "Unidad (ej. m²)", name: "unit", widget: "string", required: false },
+                  { label: "Etiqueta descriptiva", name: "label", widget: "string" }
+                ]}
+            ]}
+          - { label: "Resumen de Servicios (Cards)", name: "servicios_summary", widget: "list", fields: [
+              { label: "Imagen", name: "image", widget: "image" },
+              { label: "Título", name: "title", widget: "string" },
+              { label: "Descripción", name: "description", widget: "text" },
+              { label: "Enlace de Destino (ej. #det-rev)", name: "link", widget: "string" }
+            ]}
+          - { label: "Detalles de Servicios Individuales", name: "servicios_detalles", widget: "object", fields: [
+              { label: "Servicio 1: Revestimiento", name: "revestimiento", widget: "object", fields: [
+                  { label: "Título", name: "title", widget: "string" },
+                  { label: "Subtítulo / Lead", name: "lead", widget: "string" },
+                  { label: "Párrafo 1", name: "body_p1", widget: "text" },
+                  { label: "Párrafo 2", name: "body_p2", widget: "text" },
+                  { label: "Imagen", name: "image", widget: "image" }
+                ]},
+              { label: "Servicio 2: Electrofusión", name: "electrofusión", widget: "object", fields: [
+                  { label: "Título", name: "title", widget: "string" },
+                  { label: "Subtítulo / Lead", name: "lead", widget: "string" },
+                  { label: "Párrafo 1", name: "body_p1", widget: "text" },
+                  { label: "Párrafo 2", name: "body_p2", widget: "text" },
+                  { label: "Imagen", name: "image", widget: "image" }
+                ]},
+              { label: "Servicio 3: Diseño de Riego", name: "diseno", widget: "object", fields: [
+                  { label: "Título", name: "title", widget: "string" },
+                  { label: "Subtítulo / Lead", name: "lead", widget: "string" },
+                  { label: "Párrafo 1", name: "body_p1", widget: "text" },
+                  { label: "Párrafo 2", name: "body_p2", widget: "text" },
+                  { label: "Imagen", name: "image", widget: "image" }
+                ]}
+            ]}
+          - { label: "Sección Crisis Hídrica", name: "crisis", widget: "object", fields: [
+              { label: "Título principal", name: "title_part1", widget: "string" },
+              { label: "Título Destacado", name: "title_emphasis", widget: "string" },
+              { label: "Descripción", name: "description", widget: "text" },
+              { label: "Texto del Botón", name: "button_text", widget: "string" },
+              { label: "Enlace del Botón", name: "button_link", widget: "string" },
+              { label: "Imagen de Fondo", name: "image_src", widget: "image" }
+            ]}
+          - { label: "Sección de Contacto", name: "contacto", widget: "object", fields: [
+              { label: "Título de la Sección", name: "title", widget: "string" },
+              { label: "Descripción corta", name: "description", widget: "string" },
+              { label: "Correo receptor de Formularios", name: "email", widget: "string" },
+              { label: "Lista de Contacto (Teléfonos, Correo, etc)", name: "bullets", widget: "list", fields: [
+                  { label: "Tipo de Contacto", name: "type", widget: "select", options: ["email", "tel", "text"] },
+                  { label: "Etiqueta (ej. Teléfono)", name: "label", widget: "string" },
+                  { label: "Valor (ej. +569...)", name: "value", widget: "string" },
+                  { label: "Enlace (ej. tel:+569...)", name: "link", widget: "string", required: false }
+                ]}
+            ]}
+          - { label: "Footer", name: "footer", widget: "object", fields: [
+              { label: "Descripción de Marca", name: "brand_desc", widget: "text" },
+              { label: "Copyright", name: "copyright", widget: "string" },
+              { label: "Eslogan", name: "slogan", widget: "string" }
+            ]}
+
+  - name: "projects"
+    label: "Proyectos Realizados"
+    folder: "public/data/projects"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{title}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Título del Proyecto", name: "title", widget: "string" }
+      - { label: "Ubicación / Región", name: "region_label", widget: "string" }
+      - { label: "Zona / Categoría de Filtro", name: "category", widget: "select", options: [
+          { label: "Zona Norte", value: "norte" },
+          { label: "Zona Centro", value: "centro" },
+          { label: "Zona Sur", value: "sur" }
+        ]}
+      - { label: "Imagen del Proyecto", name: "image", widget: "image" }
+      - { label: "Tamaño en Grilla (Layout)", name: "size", widget: "select", options: [
+          { label: "Estándar (1x1)", value: "standard" },
+          { label: "Grande (2x2)", value: "big" },
+          { label: "Alto (1x2)", value: "tall" },
+          { label: "Ancho (2x1)", value: "wide" }
+        ], default: "standard" }
+      - { label: "Orden Numérico", name: "order", widget: "number", value_type: "int", default: 99 }

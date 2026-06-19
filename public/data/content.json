@@ -1,0 +1,128 @@
+{
+  "hero": {
+    "title_part1": "Impermeabilización de",
+    "title_emphasis": "tranques agrícolas.",
+    "lead": "Especialistas en instalación de geomembrana HDPE y proyectos de riego en Chile.",
+    "cta_text": "Cotizar proyecto",
+    "cta_link": "#contacto",
+    "media_type": "video",
+    "video_src": "assets/video/bbd3effe1a.mp4",
+    "image_src": "assets/img/dd83049460.webp"
+  },
+  "empresa": {
+    "ey": "Nuestra empresa",
+    "title_part1": "Impermeabilización de",
+    "title_emphasis": "tranques agrícolas.",
+    "lead": "Somos especialistas en revestimiento e impermeabilización de tranques y acumuladores de agua para el sector agrícola.",
+    "body": "Cuidamos el recurso hídrico diseñando e instalando soluciones duraderas para que el agua de riego no se pierda en filtraciones. Acompañamos a agricultores de todo Chile con criterio técnico y compromiso con el medio ambiente.",
+    "cifras": [
+      {
+        "number": "250.000",
+        "unit": "m²",
+        "label": "Metros cuadrados de geomembrana instalados"
+      },
+      {
+        "number": "10.000",
+        "unit": "ha",
+        "label": "Hectáreas diseñadas en proyectos de riego"
+      },
+      {
+        "number": "+10",
+        "unit": "años",
+        "label": "Años de experiencia técnica en terreno"
+      },
+      {
+        "number": "Todo",
+        "unit": "",
+        "label": "Chile — cobertura nacional en todas las regiones"
+      }
+    ]
+  },
+  "servicios_summary": [
+    {
+      "image": "assets/img/f53e8b9a53.webp",
+      "title": "Revestimiento",
+      "description": "Impermeabilización de tranques agrícolas con geomembrana de alta densidad (HDPE) de primera calidad.",
+      "link": "#det-rev"
+    },
+    {
+      "image": "assets/img/e00d8c1e0a.webp",
+      "title": "Electrofusión",
+      "description": "Unión técnica de tuberías HDPE con soldadura por electrofusión para redes de conducción hidráulica sin fugas.",
+      "link": "#det-elec"
+    },
+    {
+      "image": "assets/img/1893d1fcd5.webp",
+      "title": "Diseño de proyectos",
+      "description": "Planificación, cubicación y diseño hidráulico a medida para optimizar el recurso hídrico de tu campo.",
+      "link": "#det-dis"
+    }
+  ],
+  "servicios_detalles": {
+    "revestimiento": {
+      "title": "Revestimiento de Tranques",
+      "lead": "Impermeabilización garantizada para acumular agua sin pérdidas.",
+      "body_p1": "El revestimiento con geomembrana de polietileno de alta densidad (HDPE) es la solución más eficiente y duradera para evitar la infiltración de agua en el suelo. Diseñamos y ejecutamos proyectos adaptados a la topografía de tu terreno.",
+      "body_p2": "Utilizamos geomembranas certificadas resistentes a la radiación UV y agentes químicos, asegurando una vida útil prolongada y protegiendo tu inversión agrícola frente a la escasez hídrica.",
+      "image": "assets/img/fed89cfce3.webp"
+    },
+    "electrofusión": {
+      "title": "Soldadura por Electrofusión",
+      "lead": "Conexiones herméticas de alta resistencia para tuberías HDPE.",
+      "body_p1": "La electrofusión es el método más seguro y confiable para la unión de tuberías de polietileno. Mediante accesorios con resistencias eléctricas integradas, logramos una fusión molecular que garantiza la total estanqueidad de la red.",
+      "body_p2": "Nuestro equipo técnico cuenta con certificación y equipos de soldadura de última tecnología para garantizar uniones perfectas en obras hidráulicas, líneas de impulsión y sistemas de distribución de riego.",
+      "image": "assets/img/e8defbb5ad.webp"
+    },
+    "diseno": {
+      "title": "Diseño de Proyectos de Riego",
+      "lead": "Planificación técnica para la máxima eficiencia hidráulica.",
+      "body_p1": "Cada gota cuenta. Diseñamos sistemas de riego y acumulación dimensionados exactamente para las necesidades de tu cultivo y las características del suelo, optimizando el consumo energético y de agua.",
+      "body_p2": "Desarrollamos planos detallados, cubicación de materiales y memorias de cálculo para asegurar que el proyecto se ejecute con los más altos estándares y cumpla con las normativas vigentes.",
+      "image": "assets/img/f96605d828.webp"
+    }
+  },
+  "crisis": {
+    "title_part1": "La crisis hídrica es real.",
+    "title_emphasis": "solución.",
+    "description": "Chile enfrenta una sequía estructural. Cada m² impermeabilizado es agua que llega al campo y alimenta una cosecha.",
+    "button_text": "Solicitar evaluación",
+    "button_link": "#contacto",
+    "image_src": "assets/img/dd83049460.webp"
+  },
+  "contacto": {
+    "title": "Cuéntanos de tu proyecto.",
+    "description": "Respuesta en menos de 24 horas hábiles. Cobertura nacional.",
+    "email": "contactorevesval@gmail.com",
+    "bullets": [
+      {
+        "type": "email",
+        "label": "Correo",
+        "value": "contactorevesval@gmail.com",
+        "link": "mailto:contactorevesval@gmail.com"
+      },
+      {
+        "type": "tel",
+        "label": "Teléfono",
+        "value": "+569 6489 6555",
+        "link": "tel:+56964896555"
+      },
+      {
+        "type": "tel",
+        "label": "Teléfono 2",
+        "value": "+569 6239 5398",
+        "link": "tel:+56962395398"
+      },
+      {
+        "type": "text",
+        "label": "Ubicación",
+        "value": "Camino Santa Bárbara km 7, Los Ángeles",
+        "link": ""
+      }
+    ]
+  },
+  "footer": {
+    "brand_desc": "Empresa especialista en impermeabilización de tranques agrícolas con geomembrana y diseño de proyectos de riego. Preservamos el agua para el alimento.",
+    "copyright": "© 2026 REVESVAL. Todos los derechos reservados.",
+    "slogan": "Preservar el agua para el alimento."
+  }
+}
