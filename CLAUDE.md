@@ -1,37 +1,57 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to AI coding assistants working with this repository.
 
 ## What this repo is
 
-Static one-page site for **revesval.cl**. No build system, no dependencies, no package manager. The deliverable is a single self-contained HTML file deployed by uploading via cPanel File Manager to `public_html/` on Páginas de Chile (Apache shared hosting).
+Static one-page site for **revesval.cl** — impermeabilización de tranques agrícolas con geomembrana HDPE. Hosted on **Netlify** with content managed via **Decap CMS**.
 
-## Repo layout (load-bearing)
+## Architecture
 
-- `public/` — exactly what gets uploaded to `public_html/`. Nothing else goes here.
-  - `index.html` — the entire site. ~35 MB because images, a fallback video, and an SVG are embedded as base64 `data:` URIs. Treat it as the source of truth, not a build artifact.
-  - `.htaccess` — forces HTTPS, enables gzip, sets cache headers, disables directory listing.
-  - `robots.txt`
-- `docs/` — internal docs (DOCX brief, Google Ads strategy). **Never** deploy.
-- `backups/` — previous HTML versions kept for reference. **Never** deploy.
+```
+src/index.html  ←  plantilla con placeholders {{variable}}
+     +
+public/data/content.json  ←  datos editables (CMS o manual)
+public/data/projects/*.json  ←  proyectos individuales
+     ↓
+build.js  (node build.js)
+     ↓
+public/index.html  ←  sitio compilado final
+```
 
-The numbered Spanish folders (`01_Paginas_Web/`, `02_Documentos/`, `03_Estrategia_GoogleAds/`) from the original handoff have been flattened into the structure above — don't reintroduce them.
+- **`src/index.html`** — Template HTML (~370 KB, includes base64-embedded poster image). Contains `{{placeholder}}` tokens replaced at build time.
+- **`build.js`** — Node.js build script. Reads `content.json` + project files, generates dynamic HTML blocks (hero media, services, projects gallery, contact bullets, company metrics), then does a recursive key replacement pass. Output goes to `public/index.html`.
+- **`public/`** — Published directory on Netlify. Everything here is served to visitors.
+- **`public/admin/`** — Decap CMS panel (Netlify Identity auth, git-gateway backend).
+- **`public/data/`** — JSON data files edited by the CMS.
+- **`docs/`** — Internal documentation (SEO plan, Google Ads strategy). Not deployed.
 
-## Working with `index.html`
+## Build
 
-- The file is ~35 MB and **exceeds the Read tool's token limit**. Use `sed -n 'A,Bp'` or `grep -n` to inspect specific sections; do not try to Read the whole file.
-- Around line 1130 there is a `<video>` with two `<source>` tags: an external `strip_vid.mp4` (not present in the repo) followed by an embedded base64 mp4 fallback. The external file is optional — the page works without it. Don't "fix" the missing file by deleting the external `<source>`; the intent is that whoever has the original `.mp4` can drop it next to `index.html` for better performance.
-- Edits to copy/markup are done directly on `public/index.html`. There is no source-to-build step.
+```bash
+npm run build    # runs: node build.js
+```
+
+Build is triggered automatically by Netlify on every push to `main`.
+
+## Working with the template
+
+- `src/index.html` is large (~370 KB) due to an embedded base64 video poster. Use `grep -n` or line-range reads to inspect specific sections.
+- CSS is inlined in `<style>` blocks within the `<head>`. Sections are labeled with `/* ═══ SECTION NAME ═══ */` comments.
+- JS is inlined at the bottom of the file in `<script>` blocks.
+
+## Key conventions
+
+- All images in `public/assets/img/` are named by content hash (e.g., `f53e8b9a53.webp`) for automatic cache-busting.
+- Projects are individual JSON files in `public/data/projects/`, one per project.
+- The CMS config is at `public/admin/config.yml` — keep field names in sync with `content.json` keys and `build.js` replacements.
+- Keep `public/` deployable at all times — Netlify serves this directory directly.
 
 ## Deploy
 
-No CI. Deploy is manual:
-1. cPanel → File Manager → `public_html/`.
-2. Upload the **contents** of `public/` (files, not the folder). Enable "Show hidden files" so `.htaccess` is visible after upload.
-3. Verify HTTPS redirect, video playback, and that `index.html` is served as the directory index.
+Automatic via Netlify CI/CD:
+1. Push to `main` (manual or via CMS edit)
+2. Netlify runs `npm run build`
+3. Publishes `public/` to CDN
 
-## When making changes
-
-- Keep `public/` deployable as-is at all times — anything committed there will end up on the live server on the next manual upload.
-- If extracting embedded assets to separate files (a known future improvement noted in `README.md`), put them under `public/assets/` and update `.htaccess` cache rules if new MIME types are introduced.
-- The `.htaccess` assumes Apache + mod_rewrite/mod_deflate/mod_expires (standard on Páginas de Chile). Don't add Nginx-only syntax.
+No manual deploy steps needed.
