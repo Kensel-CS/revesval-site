@@ -53,7 +53,7 @@ try {
       srvSummaryHTML += `
       <a href="${s.link}" class="srv reveal">
         <div class="srv-img"><img src="${s.image}" alt="${s.title}"></div>
-        <div class="srv-desc">
+        <div class="srv-info">
           <h4>${s.title}</h4>
           <p>${s.description}</p>
           <span class="srv-more">Saber más <svg width="11" height="9" fill="none"><path d="M1 4.5h9m0 0L6.5 1M10 4.5L6.5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
