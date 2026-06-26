@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada — REVESVAL</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #111318;
+    --muted: #777e8a;
+    --blue: #2d88b0;
+    --blue2: #1e6080;
+    --font: 'Montserrat', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { height: 100%; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle background pattern */
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(45, 136, 176, .04) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(30, 96, 128, .03) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+  }
+
+  .code {
+    font-size: clamp(80px, 18vw, 140px);
+    font-weight: 700;
+    letter-spacing: -.04em;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  .code span {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .divider {
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--blue2));
+    border-radius: 2px;
+    margin: 20px auto 24px;
+  }
+
+  h1 {
+    font-size: clamp(18px, 3vw, 22px);
+    font-weight: 600;
+    letter-spacing: -.01em;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(135deg, var(--blue), var(--blue2));
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(45, 136, 176, .25);
+  }
+
+  .btn svg {
+    transition: transform .3s ease;
+  }
+
+  .btn:hover svg {
+    transform: translateX(-3px);
+  }
+
+  .logo {
+    margin-top: 48px;
+    opacity: .12;
+    transition: opacity .3s;
+  }
+
+  .logo:hover {
+    opacity: .25;
+  }
+
+  .logo img {
+    height: 22px;
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="code"><span>404</span></div>
+    <div class="divider"></div>
+    <h1>Página no encontrada</h1>
+    <p>La ruta que buscas no existe o fue movida. Vuelve al inicio para explorar nuestros servicios de impermeabilización y riego.</p>
+    <a href="/" class="btn">
+      <svg width="16" height="12" fill="none" viewBox="0 0 16 12">
+        <path d="M6 1L1 6m0 0l5 5M1 6h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Volver al inicio
+    </a>
+    <div class="logo">
+      <a href="/">
+        <img src="assets/img/logo-black.png" alt="REVESVAL">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
