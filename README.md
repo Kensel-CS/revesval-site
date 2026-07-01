@@ -143,12 +143,22 @@ npm run build
 
 <div align="center">
 
-### Desarrollado por
+<br>
 
-**Kensel Campusano**
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=18&duration=3000&pause=1000&color=2D88B0&center=true&vCenter=true&width=435&lines=Desarrollado+por+Kensel+Campusano" alt="Typing SVG">
 
-[GitHub](https://github.com/Kensel-CS) · Desarrollo Web & Soluciones Digitales
+**Ingeniero en Informática · Desarrollador Web Full Stack**
 
-<sub>Junio 2026</sub>
+Chile 🇨🇱
+
+<br>
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Kensel-CS)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kensel-campusano)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kenselcampusano@gmail.com)
+
+<br>
+
+<sub>Proyecto entregado · Junio 2026</sub>
 
 </div>
