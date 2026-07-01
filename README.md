@@ -147,31 +147,13 @@ npm run build
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&duration=2500&pause=1500&color=00FF41&center=true&vCenter=true&width=500&lines=%24+echo+%22Desarrollado+por+Kensel+Campusano%22;+Ingeniero+en+Inform%C3%A1tica;+Desarrollador+Web+Full+Stack;+Chile+%F0%9F%87%A8%F0%9F%87%B1" alt="Terminal Typing">
 
-</div>
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   > Kensel Campusano                                             ║
-║   > Ingeniero en Informática · Desarrollador Web Full Stack      ║
-║   > Chile 🇨🇱                                                     ║
-║                                                                  ║
-║   $ cat contacto.txt                                             ║
-║   → github.com/Kensel-CS                                         ║
-║   → linkedin.com/in/kensel-campusano                             ║
-║   → kenselcampusano@gmail.com                                    ║
-║                                                                  ║
-║   $ cat status.log                                               ║
-║   → Proyecto entregado · Junio 2026                              ║
-║   → Estado: ✔ producción                                         ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-<div align="center">
+<br>
 
 [![GitHub](https://img.shields.io/badge/GitHub-0D1117?style=flat-square&logo=github&logoColor=00FF41)](https://github.com/Kensel-CS)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0D1117?style=flat-square&logo=linkedin&logoColor=00FF41)](https://linkedin.com/in/kensel-campusano)
 [![Email](https://img.shields.io/badge/Email-0D1117?style=flat-square&logo=gmail&logoColor=00FF41)](mailto:kenselcampusano@gmail.com)
 
+<sub>Proyecto entregado · Junio 2026 · Estado: ✔ producción</sub>
+
 </div>
+
