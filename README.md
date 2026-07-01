@@ -149,9 +149,9 @@ npm run build
 
 <br>
 
-[![GitHub](https://img.shields.io/badge/GitHub-0D1117?style=flat-square&logo=github&logoColor=00FF41)](https://github.com/Kensel-CS)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0D1117?style=flat-square&logo=linkedin&logoColor=00FF41)](https://linkedin.com/in/kensel-campusano)
-[![Email](https://img.shields.io/badge/Email-0D1117?style=flat-square&logo=gmail&logoColor=00FF41)](mailto:kenselcampusano@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Kensel-CS)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/kensel-campusano)
+[![Gmail](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:kenselcampusano@gmail.com)
 
 <sub>Proyecto entregado · Junio 2026 · Estado: ✔ producción</sub>
 
