@@ -145,20 +145,33 @@ npm run build
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=18&duration=3000&pause=1000&color=2D88B0&center=true&vCenter=true&width=435&lines=Desarrollado+por+Kensel+Campusano" alt="Typing SVG">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&duration=2500&pause=1500&color=00FF41&center=true&vCenter=true&width=500&lines=%24+echo+%22Desarrollado+por+Kensel+Campusano%22;+Ingeniero+en+Inform%C3%A1tica;+Desarrollador+Web+Full+Stack;+Chile+%F0%9F%87%A8%F0%9F%87%B1" alt="Terminal Typing">
 
-**Ingeniero en Informática · Desarrollador Web Full Stack**
+</div>
 
-Chile 🇨🇱
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   > Kensel Campusano                                             ║
+║   > Ingeniero en Informática · Desarrollador Web Full Stack      ║
+║   > Chile 🇨🇱                                                     ║
+║                                                                  ║
+║   $ cat contacto.txt                                             ║
+║   → github.com/Kensel-CS                                         ║
+║   → linkedin.com/in/kensel-campusano                             ║
+║   → kenselcampusano@gmail.com                                    ║
+║                                                                  ║
+║   $ cat status.log                                               ║
+║   → Proyecto entregado · Junio 2026                              ║
+║   → Estado: ✔ producción                                         ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
 
-<br>
+<div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Kensel-CS)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kensel-campusano)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kenselcampusano@gmail.com)
-
-<br>
-
-<sub>Proyecto entregado · Junio 2026</sub>
+[![GitHub](https://img.shields.io/badge/GitHub-0D1117?style=flat-square&logo=github&logoColor=00FF41)](https://github.com/Kensel-CS)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0D1117?style=flat-square&logo=linkedin&logoColor=00FF41)](https://linkedin.com/in/kensel-campusano)
+[![Email](https://img.shields.io/badge/Email-0D1117?style=flat-square&logo=gmail&logoColor=00FF41)](mailto:kenselcampusano@gmail.com)
 
 </div>
