@@ -1643,7 +1643,7 @@ body {
           <div class="cdr"><span class="clbl">Ubicación</span><span class="cval">Camino Santa Bárbara km 7, Los Ángeles</span></div>
         </div>
       </div>
-      <form class="fbox reveal d1" id="contact-form">
+      <form class="fbox reveal d1" id="contact-form" onsubmit="return handleContactForm(event)">
         <h4>Solicitar visita técnica</h4>
         <p class="fsub">Te respondemos en menos de 24 horas hábiles.</p>
 
@@ -1666,6 +1666,43 @@ body {
 
         <button type="submit" class="fsub2">Enviar solicitud</button>
       </form>
+      <script>
+      function handleContactForm(e) {
+        e.preventDefault();
+        var form = document.getElementById('contact-form');
+        var btn = form.querySelector('button[type="submit"]');
+        var orig = btn.textContent;
+        btn.textContent = 'Enviando...';
+        btn.disabled = true;
+        fetch('https://formsubmit.co/ajax/contactorevesval@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            _subject: 'Nueva cotización desde Revesval.cl',
+            Nombre: document.getElementById('cf-nombre').value,
+            Correo: document.getElementById('cf-correo').value,
+            'Teléfono': document.getElementById('cf-tel').value,
+            Mensaje: document.getElementById('cf-msg').value
+          })
+        })
+        .then(function(r) {
+          if (r.ok) {
+            form.innerHTML = '<div style="text-align:center;padding:48px 24px"><svg width="48" height="48" fill="none" viewBox="0 0 24 24" style="margin:0 auto 16px;display:block"><circle cx="12" cy="12" r="11" stroke="#2d88b0" stroke-width="2"/><path d="M7 13l3 3 7-7" stroke="#2d88b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><h4 style="margin-bottom:8px;font-size:18px">¡Mensaje enviado!</h4><p style="color:#777e8a;font-size:14px;line-height:1.6">Te contactaremos a la brevedad.<br>Revisa tu correo para la confirmación.</p></div>';
+          } else {
+            btn.textContent = 'Error — Reintentar';
+            btn.disabled = false;
+            btn.style.background = '#c0392b';
+            setTimeout(function() { btn.textContent = orig; btn.style.background = ''; }, 3000);
+          }
+        })
+        .catch(function() {
+          btn.textContent = 'Sin conexión — Reintentar';
+          btn.disabled = false;
+          setTimeout(function() { btn.textContent = orig; }, 3000);
+        });
+        return false;
+      }
+      </script>
     </div>
   </div>
 </section>
@@ -1812,65 +1849,13 @@ setVH();
 window.addEventListener('resize', setVH, {passive:true});
 window.addEventListener('orientationchange', ()=>setTimeout(setVH, 200), {passive:true});
 
-// FormSubmit AJAX and WhatsApp Floating Button interactive script
+// WhatsApp Floating Button interactive script
 (function() {
-  // 1. WhatsApp Button animations
-  const wsp = document.querySelector('.wsp-float');
+  var wsp = document.querySelector('.wsp-float');
   if (wsp) {
-    setTimeout(() => { wsp.classList.add('loaded'); }, 1500);
-    setTimeout(() => { wsp.classList.add('animate-bounce'); }, 3000);
-    wsp.addEventListener('mouseenter', () => { wsp.classList.remove('animate-bounce'); });
-  }
-
-  // 2. Contact Form AJAX Submission
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const submitButton = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitButton.textContent;
-      submitButton.textContent = 'Enviando...';
-      submitButton.disabled = true;
-
-      const nameVal = document.getElementById('cf-nombre').value;
-      const emailVal = document.getElementById('cf-correo').value;
-      const telVal = document.getElementById('cf-tel').value;
-      const msgVal = document.getElementById('cf-msg').value;
-
-      const payload = {
-        _subject: 'Nueva cotización desde Revesval.cl',
-        Nombre: nameVal,
-        Correo: emailVal,
-        Teléfono: telVal,
-        Mensaje: msgVal
-      };
-
-      fetch('https://formsubmit.co/ajax/contactorevesval@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      })
-      .then(response => {
-        if (response.ok) {
-          contactForm.innerHTML = '<div style="text-align:center;padding:48px 24px"><svg width="48" height="48" fill="none" viewBox="0 0 24 24" style="margin:0 auto 16px;display:block"><circle cx="12" cy="12" r="11" stroke="#2d88b0" stroke-width="2"/><path d="M7 13l3 3 7-7" stroke="#2d88b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><h4 style="margin-bottom:8px;font-size:18px">¡Mensaje enviado!</h4><p style="color:#777e8a;font-size:14px;line-height:1.6">Te contactaremos a la brevedad.<br>Revisa tu correo para la confirmación.</p></div>';
-        } else {
-          submitButton.textContent = 'Error — Reintentar';
-          submitButton.disabled = false;
-          submitButton.style.background = '#c0392b';
-          setTimeout(() => { submitButton.textContent = originalText; submitButton.style.background = ''; }, 3000);
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        submitButton.textContent = 'Sin conexión — Reintentar';
-        submitButton.disabled = false;
-        setTimeout(() => { submitButton.textContent = originalText; }, 3000);
-      });
-    });
+    setTimeout(function() { wsp.classList.add('loaded'); }, 1500);
+    setTimeout(function() { wsp.classList.add('animate-bounce'); }, 3000);
+    wsp.addEventListener('mouseenter', function() { wsp.classList.remove('animate-bounce'); });
   }
 })();
 
